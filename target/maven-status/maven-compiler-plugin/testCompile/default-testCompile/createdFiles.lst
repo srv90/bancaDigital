@@ -1,0 +1,10 @@
+ar\com\bna\digitaltest\testcases\Login2Test.class
+ar\com\bna\digitaltest\testcases\NuevoPagoTest.class
+ar\com\bna\digitaltest\testcases\Login1Test.class
+ar\com\bna\digitaltest\testcases\BaseTest.class
+ar\com\bna\digitaltest\testcases\DebinTest.class
+ar\com\bna\digitaltest\testcases\ConfirmarPagoTest.class
+ar\com\bna\digitaltest\testcases\LoginStressTest.class
+ar\com\bna\digitaltest\testcases\RecuperarUsuarioTest.class
+ar\com\bna\digitaltest\testcases\ConfirmarPagoTokenTest.class
+ar\com\bna\digitaltest\testcases\TransferenciaTest.class

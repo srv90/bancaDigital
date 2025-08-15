@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" data-provider-thread-count="3">
+	<listeners>
+		<listener class-name="ar.com.bna.digitaltest.listeners.Listeners"/>
+	</listeners>
+	<test name="Test"> 
+		<classes>
+			<class name="ar.com.bna.digitaltest.testcases.BaseTest" />
+			<class name="ar.com.bna.digitaltest.testcases.PFTest" />
+
+<!--			<class name="ar.com.bna.digitaltest.testcases.Login1Test" />-->
+<!--			<class name="ar.com.bna.digitaltest.testcases.Login2Test" />-->
+<!--			<class name="ar.com.bna.digitaltest.testcases.RecuperarUsuarioTest" />-->
+<!--			<class name="ar.com.bna.digitaltest.testcases.NuevoPagoTest" />-->
+<!--			<class name="ar.com.bna.digitaltest.testcases.ConfirmarPagoTest" />-->
+<!--			<class name="ar.com.bna.digitaltest.testcases.TransferenciaTest" />-->
+<!--			<class name="ar.com.bna.digitaltest.testcases.DebinTest" />-->
+
+		</classes>
+	</test>
+</suite> 
