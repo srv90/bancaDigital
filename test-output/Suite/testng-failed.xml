@@ -6,20 +6,9 @@
   </listeners>
   <test thread-count="3" name="Test(failed)">
     <classes>
-      <class name="ar.com.bna.digitaltest.testcases.PerfilTest">
-        <methods>
-          <include name="changeAvatarImage"/>
-          <include name="tearDown"/>
-          <include name="openHtmlReport"/>
-          <include name="loginAndGoToSettingsPage"/>
-          <include name="setup"/>
-          <include name="initializeProperties"/>
-        </methods>
-      </class> <!-- ar.com.bna.digitaltest.testcases.PerfilTest -->
       <class name="ar.com.bna.digitaltest.testcases.DebinTest">
         <methods>
           <include name="generateDebin" invocation-numbers="0 1"/>
-          <include name="tearDown"/>
           <include name="openHtmlReport"/>
           <include name="generateDebinRecurrente" invocation-numbers="0 1"/>
           <include name="setup"/>
@@ -27,17 +16,6 @@
           <include name="initializeProperties"/>
         </methods>
       </class> <!-- ar.com.bna.digitaltest.testcases.DebinTest -->
-      <class name="ar.com.bna.digitaltest.testcases.ConfirmarPagoTokenTest">
-        <methods>
-          <include name="loginAndGoToNuevoPagoPage"/>
-          <include name="enterTokenAndSubmmitWrongPayment"/>
-          <include name="tearDown"/>
-          <include name="openHtmlReport"/>
-          <include name="enterTokenAndSubmmitCorrectPayment"/>
-          <include name="setup"/>
-          <include name="initializeProperties"/>
-        </methods>
-      </class> <!-- ar.com.bna.digitaltest.testcases.ConfirmarPagoTokenTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
