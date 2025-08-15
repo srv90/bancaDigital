@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
@@ -42,6 +43,57 @@
           </reporter-output>
         </test-method> <!-- verifyHeader -->
       </class> <!-- ar.com.bna.digitaltest.testcases.TransferenciaTest -->
+=======
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-07-14T09:23:17 GMT-03:00" name="Suite" finished-at="2025-07-14T09:25:21 GMT-03:00" duration-ms="123748">
+    <groups>
+    </groups>
+    <test started-at="2025-07-14T09:23:17 GMT-03:00" name="Test" finished-at="2025-07-14T09:25:21 GMT-03:00" duration-ms="123748">
+      <class name="ar.com.bna.digitaltest.testcases.NuevoPagoTest">
+        <test-method is-config="true" signature="initializeProperties()[pri:0, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:23:17 GMT-03:00" name="initializeProperties" finished-at="2025-07-14T09:23:17 GMT-03:00" duration-ms="12" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeProperties -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:23:17 GMT-03:00" name="setup" finished-at="2025-07-14T09:23:36 GMT-03:00" duration-ms="19024" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:23:36 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-07-14T09:24:08 GMT-03:00" duration-ms="31537" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndGoToNuevoPagoPage -->
+        <test-method signature="verifyTitle()[pri:1, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:24:08 GMT-03:00" name="verifyTitle" finished-at="2025-07-14T09:24:08 GMT-03:00" duration-ms="56" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitle -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:24:08 GMT-03:00" name="setup" finished-at="2025-07-14T09:24:27 GMT-03:00" duration-ms="19104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:24:27 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-07-14T09:24:45 GMT-03:00" duration-ms="18035" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndGoToNuevoPagoPage -->
+        <test-method signature="verifyHeader()[pri:2, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:24:45 GMT-03:00" name="verifyHeader" finished-at="2025-07-14T09:24:45 GMT-03:00" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyHeader -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:24:45 GMT-03:00" name="setup" finished-at="2025-07-14T09:25:06 GMT-03:00" duration-ms="20862" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:25:06 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-07-14T09:25:21 GMT-03:00" duration-ms="14676" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginAndGoToNuevoPagoPage -->
+        <test-method signature="enterNoDataAndSubmmit()[pri:3, instance:ar.com.bna.digitaltest.testcases.NuevoPagoTest@a8e6492]" started-at="2025-07-14T09:25:21 GMT-03:00" name="enterNoDataAndSubmmit" finished-at="2025-07-14T09:25:21 GMT-03:00" duration-ms="339" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- enterNoDataAndSubmmit -->
+      </class> <!-- ar.com.bna.digitaltest.testcases.NuevoPagoTest -->
+>>>>>>> 3ec3847 (segundo commit)
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

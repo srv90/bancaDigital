@@ -23,9 +23,9 @@ public class FirstPaymentPage1 extends BasePage {
 	public String getFirstPaymentPage1Header() {
 		return super.waitUntilElementIsPresent(header).getText();
 	}
-
+	
 	public void click() {
-		super.click(continuarButton);
+		super.clickWebElement(continuarButton);
 	}
 
 	public FirstPaymentPage2 getFirstPaymentPage2(String rubro, String ente, String codigoPago) {
@@ -38,7 +38,8 @@ public class FirstPaymentPage1 extends BasePage {
 		super.waitUntilElementIsClickable(enteDropdownValue).click();
 		super.getWebElement(codigoPagoTextbox).sendKeys(codigoPago);
 		//super.getWebElement(guardarPagoCheckbox).click();
-		this.getWebElement(continuarButton).click();
+		super.waitUntilElementIsClickable(continuarButton).click();
+		
 		return super.getInstance(FirstPaymentPage2.class);
 	}
 

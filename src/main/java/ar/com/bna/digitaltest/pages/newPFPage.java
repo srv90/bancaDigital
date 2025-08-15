@@ -31,10 +31,13 @@ public class newPFPage extends BasePage {
 		super.getWebElement(this.importe).sendKeys(importe);
 		super.getWebElement(cuentaOrigenCombobox).click();
 		List<WebElement> cuentas = super.getWebElements(this.cuentas);
-		String numeroCuenta = Utilities.getCuenta(cuentas, importe).orElseThrow(() -> new RuntimeException("Ninguna cuenta tiene saldo suficiente para hacer un PF"));
+
+		String numeroCuenta = Utilities.getCuenta(cuentas, importe)
+				.orElseThrow(() -> new RuntimeException("Ninguna cuenta tiene saldo suficiente para hacer un PF"));
 		this.cuenta = By.xpath("//span[normalize-space()='" + numeroCuenta + "']");
 		super.moveToWebElement(cuenta);
 		super.click(this.cuenta);
+
 		super.waitUntilElementIsClickable(tipoPFCombobox).click();
 		super.moveToWebElement(tipoPF);
 		super.waitUntilElementIsPresent(tipoPF).click();
@@ -43,6 +46,7 @@ public class newPFPage extends BasePage {
 		super.getWebElement(this.plazo).sendKeys(plazo);
 		super.moveToWebElement(continuarButton);
 		super.getWebElement(continuarButton).click();
+
 		return super.getInstance(newPFPage2.class);
 	}
 

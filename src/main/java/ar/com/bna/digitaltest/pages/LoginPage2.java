@@ -10,7 +10,7 @@ public class LoginPage2 extends BasePage {
 	private By avatarImagen = By.cssSelector("img[id^='avatar']");
 	private By alertError = By.xpath("//div[@class='notification-message']");
 	
-	public LoginPage2(WebDriver driver) {
+		public LoginPage2(WebDriver driver) {
 		super(driver);
 	}
 
@@ -21,7 +21,7 @@ public class LoginPage2 extends BasePage {
 	public boolean avatarIsDisplayed() {
 		return super.waitUntilElementIsPresent(avatarImagen).isDisplayed();
 	}
-	
+
 	
 	public String alertErrorMessageText() {
 		
@@ -30,6 +30,11 @@ public class LoginPage2 extends BasePage {
 
 	public boolean alertErrorMessageIsDisplayed() {
 		return super.waitUntilElementIsPresent(alertError).isDisplayed();
+	}
+	
+	public String getImagenActual() {
+		
+		return super.waitUntilElementIsPresent(avatarImagen).getAttribute("id");
 	}
 
 	public HomePage getHomePage() {

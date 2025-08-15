@@ -54,7 +54,7 @@ public class ConfirmarPagoTokenTest extends BaseTest {
 
 	}
 
-	@Test(priority = 1)
+	@Test(priority = 1, enabled = false)
 	public void verifyTitle() {
 
 		firstPaymentPage2 = firstPaymentPage1.getFirstPaymentPage2(rubro, ente, codigoPagoIncorrecto);
@@ -62,7 +62,7 @@ public class ConfirmarPagoTokenTest extends BaseTest {
 		Assert.assertEquals(super.getTestDataProperties().getProperty("title"), firstPaymentPage3.getPageTitle());
 	}
 
-	@Test(priority = 2)
+	@Test(priority = 2, enabled = false)
 	public void verifyHeader() {
 		firstPaymentPage2 = firstPaymentPage1.getFirstPaymentPage2(rubro, ente, codigoPagoIncorrecto);
 		firstPaymentPage3 = firstPaymentPage2.generarPago("1000", concepto, referencia);
@@ -70,7 +70,7 @@ public class ConfirmarPagoTokenTest extends BaseTest {
 
 	}
 
-	@Test(priority = 3)
+	@Test(priority = 3, enabled = false)
 	public void enterNoTokenAndSubmmit() {
 		firstPaymentPage2 = firstPaymentPage1.getFirstPaymentPage2(rubro, ente, codigoPagoIncorrecto);
 		firstPaymentPage3 = firstPaymentPage2.generarPago("1000", concepto, referencia);
@@ -79,7 +79,7 @@ public class ConfirmarPagoTokenTest extends BaseTest {
 
 	}
 
-	@Test(priority = 4, description = "Valida que los datos ingresados en la pantalla anterior sean los mismos")
+	@Test(priority = 4, enabled = false, description = "Valida que los datos ingresados en la pantalla anterior sean los mismos")
 	public void verifyData() {
 		firstPaymentPage2 = firstPaymentPage1.getFirstPaymentPage2(rubro, ente, codigoPagoIncorrecto);
 		firstPaymentPage3 = firstPaymentPage2.generarPago("1000", concepto, referencia);

@@ -3,14 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ar.com.bna.digitaltest.testcases.PFTest">
+      <class name="ar.com.bna.digitaltest.testcases.ConfirmarPagoTokenTest">
         <methods>
-          <include name="loginAndGoToInvestmentsPage"/>
+          <include name="loginAndGoToNuevoPagoPage"/>
+          <include name="enterTokenAndSubmmitWrongPayment"/>
+          <include name="openHtmlReport"/>
           <include name="setup"/>
           <include name="initializeProperties"/>
-          <include name="generatePF" invocation-numbers="0"/>
         </methods>
-      </class> <!-- ar.com.bna.digitaltest.testcases.PFTest -->
+      </class> <!-- ar.com.bna.digitaltest.testcases.ConfirmarPagoTokenTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

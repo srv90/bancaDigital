@@ -5,12 +5,13 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
 
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -36,91 +37,51 @@ public class BaseTest {
 	@BeforeClass
 	public void initializeProperties() {
 
-		FileInputStream fileInputStream = null;
 		properties = new Properties();
 		propertiesData = new Properties();
 
-		try {
-			fileInputStream = new FileInputStream(System.getProperty("user.dir")
-					+ "\\src\\main\\java\\ar\\com\\bna\\digitaltest\\config\\config.properties");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		try {
-			properties.load(fileInputStream);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		loadProperties(properties, "src/main/java/ar/com/bna/digitaltest/config/config.properties");
+		loadProperties(propertiesData, "src/main/java/ar/com/bna/digitaltest/testdata/testdata.properties");
 
-		try {
-			fileInputStream = new FileInputStream(System.getProperty("user.dir")
-					+ "\\src\\main\\java\\ar\\com\\bna\\digitaltest\\testdata\\testdata.properties");
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-		try {
-			propertiesData.load(fileInputStream);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
 		System.out.println("PROPERTIES LOADED");
 
 	}
 
 	@BeforeMethod
-	// @BeforeClass(dependsOnMethods = "initializeProperties")
 	public void setup() {
 
 		// logger = LogManager.getLogger(this.getClass());
 
-		String browser = System.getProperty("browser") != null ? System.getProperty("browser")
-				: properties.getProperty("browser");
-		ChromeOptions options = new ChromeOptions();
-		
-		Map<String, Boolean> prefs = new HashMap<String, Boolean>();
-        prefs.put("credentials_enable_service", false);
-        prefs.put("profile.password_manager_enabled", false);
+		String browser = System.getProperty("browser", properties.getProperty("browser")).toLowerCase();
 
-        options.setExperimentalOption("prefs", prefs);
-		if (browser.contains("headless")) {
-			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
-			options.addArguments("--headless=new");
-			options.addArguments("--force-device-scale-factor=0.9");
-			//options.addArguments("--start-maximized");
-			options.addArguments("--window-size=1920,1080");
-
-			driverThread.set(new ChromeDriver(options));
-			//driverThread.get().manage().window().setSize(new Dimension(1440, 990));
-
-		} else if (browser.equalsIgnoreCase("chrome")) {
-			options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
-			options.addArguments("--force-device-scale-factor=0.9");
-
-			// options.setPageLoadStrategy(PageLoadStrategy.NONE);
-			// options.addArguments("--disk-cache-dir=/path/to/cache");
-			// options.addArguments("--disable-blink-features=AutomationControlled");
-			// options.addArguments("--remote-allow-origins=*");
-			// options.addArguments("--window-size=1920,1080");
-			driverThread.set(new ChromeDriver(options));
-			driverThread.get().manage().window().maximize();
-		} else if (browser.equalsIgnoreCase("firefox")) {
+		switch (browser) {
+		case "chrome":
+			driver = createChromeDriver(false);
+			break;
+		case "headless":
+			driver = createChromeDriver(true);
+			break;
+		case "firefox":
 			driver = new FirefoxDriver();
-		} else if (browser.equalsIgnoreCase("edge")) {
+			break;
+		case "edge":
 			driver = new EdgeDriver();
-		}
+			break;
+		default:
+			throw new IllegalArgumentException("Unsupported browser: " + browser);
 
-		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(Utilities.IMPLICIT_WAIT_TIME));
-		//driver.manage().deleteAllCookies();
-		// driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(Utilities.PAGE_lOAD_TIMEOUT));
-		driverThread.get().get(properties.getProperty("url"));
-		driver = driverThread.get();
-		// page = new BasePage(driver);
-		pageThread.set(new BasePage(driverThread.get()));
-		System.out.println("Before Test Thread ID: " + Thread.currentThread().getId());
+		}
+		
+		driver.manage().window().maximize();
+		driver.get(properties.getProperty("url"));
+		driverThread.set(driver);
+		pageThread.set(new BasePage(driver));
+
+		System.out.printf("Before Test Thread ID: %d%n", Thread.currentThread().getId());
 		System.out.println("DRIVER CREATED");
 	}
 
-	//@AfterMethod(alwaysRun = true)
+	// @AfterMethod
 	public void tearDown() {
 
 		System.out.println("After Test Thread ID: " + Thread.currentThread().getId());
@@ -130,7 +91,7 @@ public class BaseTest {
 
 	}
 
-	//@AfterSuite()
+	@AfterSuite()
 	public void openHtmlReport() {
 
 		try {
@@ -141,7 +102,7 @@ public class BaseTest {
 				System.out.println("No se encuentra el reporte " + reportsFile.getAbsolutePath());
 			}
 		} catch (Exception e) {
-				e.printStackTrace();
+			e.printStackTrace();
 		}
 
 	}
@@ -156,6 +117,36 @@ public class BaseTest {
 
 	public Properties getTestDataProperties() {
 		return propertiesData;
+	}
+
+	private void loadProperties(Properties props, String relativePath) {
+		Path path = Paths.get(System.getProperty("user.dir"), relativePath);
+
+		try (FileInputStream fis = new FileInputStream(path.toFile())) {
+			props.load(fis);
+		} catch (FileNotFoundException e) {
+			throw new RuntimeException("Properties file not found: " + path, e);
+		} catch (IOException e) {
+			throw new RuntimeException("Error loading properties file: " + path, e);
+		}
+	}
+
+	private WebDriver createChromeDriver(boolean headless) {
+		ChromeOptions options = new ChromeOptions();
+
+		options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+		Map<String, Object> prefs = new HashMap<>();
+		prefs.put("credentials_enable_service", false);
+		prefs.put("profile.password_manager_enabled", false);
+		options.setExperimentalOption("prefs", prefs);
+
+		if (headless) {
+			options.addArguments("--headless=new", "--force-device-scale-factor=0.6");
+		} else {
+			options.addArguments("--force-device-scale-factor=0.9");
+		}
+
+		return new ChromeDriver(options);
 	}
 
 }
