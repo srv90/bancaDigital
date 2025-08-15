@@ -16,7 +16,7 @@ public class FirstPaymentPage3 extends BasePage {
 	private By enteLabel = By.id("firstPayment.request.entity.label");
 	private By codigoPagoLabel = By.id("firstPayment.request.paymentCode.label");
 	private By conceptoLabel = By.id("firstPayment.request.concept.label");
-	private By firstToken = By.xpath("(//div[@class='sc-edKZPI jHDjUE line hideValue'])[1]");
+	private By firstToken = By.xpath("(//div[@class='sc-edKZPI bZSjid line hideValue'])[1]");
 	private By tokens = By.id("secondFactor");
 
 	public FirstPaymentPage3(WebDriver driver) {
@@ -42,7 +42,7 @@ public class FirstPaymentPage3 extends BasePage {
 	public TicketPage ingresarTokenYGenerarPago() {
 		
 		super.moveToWebElement(confirmarButton);
-		//super.clickWebElement(firstToken);
+		super.clickWebElement(firstToken);
 	    super.getWebElement(tokens).sendKeys("111111", Keys.ENTER);
 	    return super.getInstance(TicketPage.class);
 	}

@@ -1,41 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-09T18:28:19 ART" name="Default suite" finished-at="2025-07-09T18:28:37 ART" duration-ms="18419">
+  <suite started-at="2025-08-15T19:07:23 GMT-03:00" name="Suite" finished-at="2025-08-15T19:08:17 GMT-03:00" duration-ms="54266">
     <groups>
     </groups>
-    <test started-at="2025-07-09T18:28:19 ART" name="Default test" finished-at="2025-07-09T18:28:37 ART" duration-ms="18419">
+    <test started-at="2025-08-15T19:07:23 GMT-03:00" name="Test" finished-at="2025-08-15T19:08:17 GMT-03:00" duration-ms="54266">
+      <class name="ar.com.bna.digitaltest.testcases.BaseTest">
+        <test-method is-config="true" signature="openHtmlReport()[pri:0, instance:ar.com.bna.digitaltest.testcases.BaseTest@821330f]" started-at="2025-08-15T19:08:17 GMT-03:00" name="openHtmlReport" finished-at="2025-08-15T19:08:18 GMT-03:00" duration-ms="740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openHtmlReport -->
+      </class> <!-- ar.com.bna.digitaltest.testcases.BaseTest -->
       <class name="ar.com.bna.digitaltest.testcases.PFTest">
-        <test-method is-config="true" signature="initializeProperties()[pri:0, instance:ar.com.bna.digitaltest.testcases.PFTest@7b9a4292]" started-at="2025-07-09T18:28:19 ART" name="initializeProperties" finished-at="2025-07-09T18:28:19 ART" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="initializeProperties()[pri:0, instance:ar.com.bna.digitaltest.testcases.PFTest@57db2b13]" started-at="2025-08-15T19:07:23 GMT-03:00" name="initializeProperties" finished-at="2025-08-15T19:07:23 GMT-03:00" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeProperties -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.PFTest@7b9a4292]" started-at="2025-07-09T18:28:19 ART" name="setup" finished-at="2025-07-09T18:28:23 ART" duration-ms="4214" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.PFTest@57db2b13]" started-at="2025-08-15T19:07:23 GMT-03:00" name="setup" finished-at="2025-08-15T19:07:58 GMT-03:00" duration-ms="35476" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="generatePF(java.lang.String,java.lang.String)[pri:1, instance:ar.com.bna.digitaltest.testcases.PFTest@7b9a4292]" started-at="2025-07-09T18:28:23 ART" name="generatePF" data-provider="dataProvider" finished-at="2025-07-09T18:28:37 ART" duration-ms="14172" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[pruebaqa66]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Test01xp!]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- generatePF -->
-        <test-method is-config="true" signature="loginAndGoToInvestmentsPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.PFTest@7b9a4292]" started-at="2025-07-09T18:28:23 ART" name="loginAndGoToInvestmentsPage" finished-at="2025-07-09T18:28:23 ART" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="loginAndGoToInvestmentsPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.PFTest@57db2b13]" started-at="2025-08-15T19:07:58 GMT-03:00" name="loginAndGoToInvestmentsPage" finished-at="2025-08-15T19:07:58 GMT-03:00" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndGoToInvestmentsPage -->
+        <test-method signature="generatePF()[pri:1, instance:ar.com.bna.digitaltest.testcases.PFTest@57db2b13]" started-at="2025-08-15T19:07:58 GMT-03:00" name="generatePF" finished-at="2025-08-15T19:08:17 GMT-03:00" duration-ms="18754" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generatePF -->
       </class> <!-- ar.com.bna.digitaltest.testcases.PFTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

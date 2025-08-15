@@ -1,10 +1,7 @@
 package ar.com.bna.digitaltest.pages;
 
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class HomePage extends BasePage {
 
@@ -15,10 +12,13 @@ public class HomePage extends BasePage {
 	private By transferenciasButton = By.id("menu.diaryTransfer.button");
 	private By debinButton = By.id("menu.debin.button");
 	private By vencimientos = By.xpath("(//div[@class='sc-cbelJu itLWeV'])[3]");
+	// private By inversionesButton = By.id('investments_quick_access"');
 	private By inversionesButton = By.xpath("//span[normalize-space()='Invertir']");
 	// private By inversionesButton = By.id("menu.INVESTMENTS.button");
-	private By instagramButton = By.xpath("//button[@class='sc-fqkvVR sc-iGgWBj dKdTHM ugwH sc-fifgRP cjbiky']");
-	private By instagramModal = By.id("modal-content");
+	//private By instagramButton = By.xpath("//button[@class='sc-fqkvVR sc-iGgWBj dKdTHM ugwH sc-fifgRP cjbiky']"); --banca individuo
+	//private By instagramModal = By.id("modal-content");
+	private By settingsButton = By.id("loggedUserMenu");
+	private By perfilButton = By.id("settings.title");
 
 	public HomePage(WebDriver driver) {
 		super(driver);
@@ -56,24 +56,39 @@ public class HomePage extends BasePage {
 
 	public DebinPage getDebinPage() {
 		this.getCuentasClienteEmpresa();
+		super.moveToWebElement(debinButton);
 		super.clickWebElement(debinButton);
 		return super.getInstance(DebinPage.class);
 	}
 
 	public InvestmentsPage getInvestmentsPage() {
 
-		this.getCuentasClienteIndividuo();
+		this.getCuentasClienteEmpresa();
 
-		if (super.existsElement(instagramModal) > 0) {
-
-			super.waitUntilElementIsPresent(instagramModal).findElement(instagramButton).click();
-
-		}
+//		if (super.existsElement(instagramModal) > 0) {
+//
+//			super.waitUntilElementIsPresent(instagramModal).findElement(instagramButton).click();
+//
+//		}
+//
+//		try {
+//			super.waitUntilElementIsPresent(instagramModal).findElement(instagramButton).click();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//
+//		}
 
 		super.moveToWebElement(inversionesButton);
 		super.waitUntilElementIsClickable(inversionesButton).click();
 		return super.getInstance(InvestmentsPage.class);
+	}
 
+	public SettingsPage getSettingsPage() {
+
+		super.clickWebElement(settingsButton);
+		super.clickWebElement(perfilButton);
+
+		return super.getInstance(SettingsPage.class);
 	}
 
 }

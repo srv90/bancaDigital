@@ -31,25 +31,17 @@ public class Utilities {
 	}
 
 	public static Optional<String> getCuenta(List<WebElement> cuentas, String importe) {
-		return cuentas.stream().filter(cuenta -> Double.parseDouble(importe) < formatearMonto(cuenta.getText())).map(WebElement::getText).findFirst();
+		return cuentas.stream().filter(cuenta -> Double.parseDouble(importe) < formatearMonto(cuenta.getText()))
+				.map(WebElement::getText).findFirst();
 	}
 
 	public static double formatearMonto(String monto) {
+
 		try {
 			return Double.parseDouble(monto.replaceAll("[^\\d,\\.]", "").replace(".", "").replace(",", "."));
 		} catch (Exception e) {
 			throw new IllegalArgumentException("Monto inválido: " + monto, e);
 		}
 	}
-
-//	public static double formatearMonto(String monto) {
-//
-//		return Double.valueOf(monto.split("\\$")[1].replace(".", "").replace(",", ".").trim());
-//	}
-
-//	public static String getCuenta(List<WebElement> cuentas, String importe) {
-//	return cuentas.stream().filter(s -> Double.valueOf(importe) < formatearMonto(s.getText())).findFirst().get()
-//			.getText();
-//}
 
 }

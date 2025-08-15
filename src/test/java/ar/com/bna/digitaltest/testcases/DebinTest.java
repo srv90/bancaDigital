@@ -62,7 +62,6 @@ public class DebinTest extends BaseTest {
 		boolean recurrencia = false;
 
 		getMonedaYAlias(moneda);
-
 		sellerPage = debinPage.getSolicitudesPage();
 		sellerGeneratePage = sellerPage.getOrdenDebinPage();
 		ticketPage = sellerGeneratePage.generarDebin(importe, alias, horaExpiracion, recurrencia, this.moneda);
@@ -74,6 +73,7 @@ public class DebinTest extends BaseTest {
 	}
 
 	@Test(priority = 4, dataProvider = "debinData")
+
 	public void generateDebinRecurrente(int moneda, String importe) {
 
 		boolean recurrencia = true;
@@ -91,7 +91,7 @@ public class DebinTest extends BaseTest {
 	@DataProvider
 	public static Object[][] debinData() {
 
-		return new Object[][] { { 1, "1.23" } };
+		return new Object[][] { { 1, "1" }, { 2, "1" } };
 
 	}
 
@@ -103,7 +103,5 @@ public class DebinTest extends BaseTest {
 			this.moneda = "USD";
 			this.alias = aliasUsd;
 		}
-		
-		
 	}
 }

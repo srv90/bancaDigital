@@ -24,7 +24,8 @@ public class FirstPaymentPage2 extends BasePage {
 	private By cuentas = By.xpath("//span[contains(@aria-label, ' Pesos argentinos ')]");
 	private By cuentaDebitoCombobox = By.id("debitAccount_debitAccountContainer");
 	private By referenciaTextbox = By.id("reference");
-	
+
+	private By cuenta = null;
 
 	public FirstPaymentPage2(WebDriver driver) {
 		super(driver);
@@ -34,29 +35,33 @@ public class FirstPaymentPage2 extends BasePage {
 		return super.waitUntilElementIsPresent(header).getText();
 	}
 
+	public boolean validarDatos(String rubro, String ente, String codigoPago) {
+
+		return super.waitUntilElementIsPresent(rubroLabel).getText().equals(rubro)
+				&& super.waitUntilElementIsPresent(enteLabel).getText().equals(ente)
+				&& super.waitUntilElementIsPresent(codigoPagoLabel).getText().equals(codigoPago);
+	}
+
 	public void click() {
 		super.clickWebElement(continuarButton);
 	}
-	
-	public boolean validarDatos(String rubro, String ente, String codigoPago) {
-		
-		return super.waitUntilElementIsPresent(rubroLabel).getText().equals(rubro) && 
-			   super.waitUntilElementIsPresent(enteLabel).getText().equals(ente) &&
-			   super.waitUntilElementIsPresent(codigoPagoLabel).getText().equals(codigoPago);
-	}
-	
+
 	public FirstPaymentPage3 generarPago(String importe, String concepto, String referencia) {
-		
+
 		super.moveToWebElement(this.continuarButton);
 		super.waitUntilElementIsClickable(cuentaDebitoCombobox).click();
 		List<WebElement> cuentas = super.getWebElements(this.cuentas);
-		cuentas.stream().filter(s-> s.getText().contains(Utilities.getCuenta(cuentas, importe))).findFirst().get().click();	
-		super.click(conceptoButton);
+		String numeroCuenta = Utilities.getCuenta(cuentas, importe).orElseThrow(
+				() -> new RuntimeException("Ninguna cuenta tiene saldo suficiente para hacer la transacción."));
+		this.cuenta = By.xpath("//span[normalize-space()='" + numeroCuenta + "']");
+		super.moveToWebElement(cuenta);
+		super.waitUntilElementIsClickable(this.cuenta).click();
+		super.waitUntilElementIsClickable(conceptoButton).click();
 		super.waitUntilElementIsPresent(conceptoCombobox).click();
 		super.getWebElement(referenciaTextbox).sendKeys(referencia);
 		super.doubleClickWebElement(importeTextbox);
 		super.getWebElement(importeTextbox).sendKeys(importe);
-		this.click();
+		super.clickWebElement(continuarButton);
 		return super.getInstance(FirstPaymentPage3.class);
 	}
 
@@ -65,6 +70,5 @@ public class FirstPaymentPage2 extends BasePage {
 		return super.getWebElements(errorMessage).stream().allMatch(s -> s.getText().equals(message));
 
 	}
-	
-	
+
 }

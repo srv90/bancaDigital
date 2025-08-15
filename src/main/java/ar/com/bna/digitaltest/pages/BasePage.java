@@ -19,10 +19,13 @@ public class BasePage {
 	protected WebDriver driver;
 	protected WebDriverWait wait;
 	private Actions actions;
+	private static final int DEFAULT_WAIT_SECONDS = Integer.parseInt(
+		    System.getProperty("espera.segundos", "40")
+		);
 
 	public BasePage(WebDriver driver) {
 		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(60));
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(DEFAULT_WAIT_SECONDS ));
 		actions = new Actions(driver);
 
 	}
@@ -34,10 +37,10 @@ public class BasePage {
 			return pageClass.getDeclaredConstructor(WebDriver.class).newInstance(this.driver);
 		} catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
 				| NoSuchMethodException | SecurityException e) {
-			e.printStackTrace();
+            throw new RuntimeException("No se pude crear la página: " + pageClass.getSimpleName(), e);
 
 		}
-		return null;
+	
 	}
 
 	public void sendKeys(By locator, String text) {
@@ -121,10 +124,10 @@ public class BasePage {
 	}
 
 	public int existsElement(By locator) {
+
 		return driver.findElements(locator).size();
 
 	}
-
 	/*
 	 * public String getPageHeader(By locator) { return
 	 * this.getWebElement(locator).getText(); }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\Enrique\Desktop\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\TransfersPage.java
 C:\Users\Enrique\Desktop\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\FirstPaymentPage3.java
 C:\Users\Enrique\Desktop\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\BuyerPage.java
@@ -19,3 +20,32 @@ C:\Users\Enrique\Desktop\bancadigital\src\main\java\ar\com\bna\digitaltest\pages
 C:\Users\Enrique\Desktop\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\PaymentsAgenda.java
 C:\Users\Enrique\Desktop\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\DebinPage.java
 C:\Users\Enrique\Desktop\bancadigital\src\main\java\ar\com\bna\digitaltest\util\ExtentReporter.java
+=======
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\AddTaxesServicesPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\RecuperarUsuarioPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\HomePage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\PaymentsPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\TransfersPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\TicketPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\DiaryTransferPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\LoginPage1.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\SellerGeneratePage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\ComprobantePFPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\DebinPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\FirstPaymentPage1.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\listeners\Listeners.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\newPFPage2.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\util\ExtentReporter.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\ComprobantePage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\FirstPaymentPage3.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\newPFPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\PaymentsAgenda.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\DiaryTransfer.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\BuyerPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\LoginPage2.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\BasePage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\SellerPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\FirstPaymentPage2.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\pages\InvestmentsPage.java
+C:\Users\E97782\eclipse-workspace\bancadigital\src\main\java\ar\com\bna\digitaltest\util\Utilities.java
+>>>>>>> 3ec3847 (segundo commit)

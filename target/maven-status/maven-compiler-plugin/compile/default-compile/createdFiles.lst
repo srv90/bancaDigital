@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ar\com\bna\digitaltest\pages\ComprobantePage.class
 ar\com\bna\digitaltest\pages\HomePage.class
 ar\com\bna\digitaltest\pages\PaymentsAgenda.class
@@ -14,6 +15,30 @@ ar\com\bna\digitaltest\pages\LoginPage1.class
 ar\com\bna\digitaltest\pages\LoginPage2.class
 ar\com\bna\digitaltest\pages\PaymentsPage.class
 ar\com\bna\digitaltest\pages\FirstPaymentPage3.class
+=======
+ar\com\bna\digitaltest\pages\PaymentsAgenda.class
+ar\com\bna\digitaltest\pages\DiaryTransfer.class
+ar\com\bna\digitaltest\pages\TicketPage.class
+ar\com\bna\digitaltest\pages\newPFPage.class
+ar\com\bna\digitaltest\pages\ComprobantePFPage.class
+ar\com\bna\digitaltest\pages\TransfersPage.class
+ar\com\bna\digitaltest\listeners\Listeners.class
+ar\com\bna\digitaltest\pages\RecuperarUsuarioPage.class
+ar\com\bna\digitaltest\pages\SellerPage.class
+ar\com\bna\digitaltest\pages\LoginPage1.class
+ar\com\bna\digitaltest\pages\FirstPaymentPage3.class
+ar\com\bna\digitaltest\pages\ComprobantePage.class
+ar\com\bna\digitaltest\pages\HomePage.class
+ar\com\bna\digitaltest\pages\newPFPage2.class
+ar\com\bna\digitaltest\pages\SellerGeneratePage.class
+ar\com\bna\digitaltest\pages\DiaryTransferPage.class
+ar\com\bna\digitaltest\pages\InvestmentsPage.class
+ar\com\bna\digitaltest\pages\AddTaxesServicesPage.class
+ar\com\bna\digitaltest\pages\FirstPaymentPage2.class
+ar\com\bna\digitaltest\pages\FirstPaymentPage1.class
+ar\com\bna\digitaltest\pages\LoginPage2.class
+ar\com\bna\digitaltest\pages\PaymentsPage.class
+>>>>>>> 3ec3847 (segundo commit)
 ar\com\bna\digitaltest\util\Utilities.class
 ar\com\bna\digitaltest\pages\BasePage.class
 ar\com\bna\digitaltest\pages\DebinPage.class
