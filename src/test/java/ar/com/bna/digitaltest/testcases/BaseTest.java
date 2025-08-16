@@ -12,6 +12,7 @@ import java.util.Map;
 import java.util.Properties;
 
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -33,6 +34,7 @@ public class BaseTest {
 	protected Logger logger;
 	private ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
 	private ThreadLocal<BasePage> pageThread = new ThreadLocal<>();
+	private Proxy proxy;
 
 	@BeforeClass
 	public void initializeProperties() {
@@ -81,7 +83,7 @@ public class BaseTest {
 		System.out.println("DRIVER CREATED");
 	}
 
-	// @AfterMethod
+	@AfterMethod
 	public void tearDown() {
 
 		System.out.println("After Test Thread ID: " + Thread.currentThread().getId());
@@ -133,7 +135,8 @@ public class BaseTest {
 
 	private WebDriver createChromeDriver(boolean headless) {
 		ChromeOptions options = new ChromeOptions();
-
+		proxy = new Proxy();
+		proxy.setHttpProxy("10.2.248.246:8080");
 		options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
 		Map<String, Object> prefs = new HashMap<>();
 		prefs.put("credentials_enable_service", false);
