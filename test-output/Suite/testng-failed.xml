@@ -8,9 +8,9 @@
     <classes>
       <class name="ar.com.bna.digitaltest.testcases.DebinTest">
         <methods>
-          <include name="generateDebin" invocation-numbers="0 1"/>
+          <include name="generateDebin"/>
           <include name="openHtmlReport"/>
-          <include name="generateDebinRecurrente" invocation-numbers="0 1"/>
+          <include name="generateDebinRecurrente"/>
           <include name="setup"/>
           <include name="loginAndGoToNuevoPagoPage"/>
           <include name="initializeProperties"/>
