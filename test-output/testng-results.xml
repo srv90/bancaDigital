@@ -1,25 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="3" total="7" passed="0" failed="4" skipped="0">
+<testng-results ignored="3" total="7" passed="0" failed="0" skipped="4">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-15T19:09:27 GMT-03:00" name="Suite" finished-at="2025-08-15T19:15:32 GMT-03:00" duration-ms="365136">
+  <suite started-at="2025-08-16T15:24:23 GMT-03:00" name="Suite" finished-at="2025-08-16T15:25:13 GMT-03:00" duration-ms="49790">
     <groups>
     </groups>
-    <test started-at="2025-08-15T19:09:27 GMT-03:00" name="Test" finished-at="2025-08-15T19:15:32 GMT-03:00" duration-ms="365136">
+    <test started-at="2025-08-16T15:24:23 GMT-03:00" name="Test" finished-at="2025-08-16T15:25:13 GMT-03:00" duration-ms="49790">
       <class name="ar.com.bna.digitaltest.testcases.DebinTest">
-        <test-method is-config="true" signature="initializeProperties()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:09:27 GMT-03:00" name="initializeProperties" finished-at="2025-08-15T19:09:27 GMT-03:00" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="initializeProperties()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:24:23 GMT-03:00" name="initializeProperties" finished-at="2025-08-16T15:24:23 GMT-03:00" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeProperties -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:09:27 GMT-03:00" name="setup" finished-at="2025-08-15T19:10:02 GMT-03:00" duration-ms="35293" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:24:23 GMT-03:00" name="setup" finished-at="2025-08-16T15:24:32 GMT-03:00" duration-ms="9226" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:10:02 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-08-15T19:10:11 GMT-03:00" duration-ms="8964" status="PASS">
+        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:24:32 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-08-16T15:25:13 GMT-03:00" duration-ms="40449" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null
+at ar.com.bna.digitaltest.pages.BasePage.sendKeys(BasePage.java:47)
+at ar.com.bna.digitaltest.pages.LoginPage1.enterUsername(LoginPage1.java:23)
+at ar.com.bna.digitaltest.testcases.DebinTest.loginAndGoToNuevoPagoPage(DebinTest.java:40)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndGoToNuevoPagoPage -->
-        <test-method signature="generateDebin(int,java.lang.String)[pri:3, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:10:11 GMT-03:00" name="generateDebin" data-provider="debinData" finished-at="2025-08-15T19:10:58 GMT-03:00" duration-ms="46910" status="FAIL">
+        <test-method signature="generateDebin(int,java.lang.String)[pri:3, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="generateDebin" data-provider="debinData" finished-at="2025-08-16T15:25:13 GMT-03:00" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -34,16 +76,21 @@
           </params>
           <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.getText()" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.getText()" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null
-at ar.com.bna.digitaltest.pages.TicketPage.getMessageText(TicketPage.java:18)
-at ar.com.bna.digitaltest.testcases.DebinTest.generateDebin(DebinTest.java:68)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null
+at ar.com.bna.digitaltest.pages.BasePage.sendKeys(BasePage.java:47)
+at ar.com.bna.digitaltest.pages.LoginPage1.enterUsername(LoginPage1.java:23)
+at ar.com.bna.digitaltest.testcases.DebinTest.loginAndGoToNuevoPagoPage(DebinTest.java:40)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -72,15 +119,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateDebin -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:10:58 GMT-03:00" name="setup" finished-at="2025-08-15T19:11:33 GMT-03:00" duration-ms="34725" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="setup" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1755368713465" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:11:33 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-08-15T19:11:42 GMT-03:00" duration-ms="9018" status="PASS">
+        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1755368713466" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndGoToNuevoPagoPage -->
-        <test-method signature="generateDebin(int,java.lang.String)[pri:3, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:11:42 GMT-03:00" name="generateDebin" data-provider="debinData" finished-at="2025-08-15T19:12:28 GMT-03:00" duration-ms="46617" status="FAIL">
+        <test-method signature="generateDebin(int,java.lang.String)[pri:3, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="generateDebin" data-provider="debinData" finished-at="2025-08-16T15:25:13 GMT-03:00" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -95,16 +142,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.getText()" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.getText()" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null
-at ar.com.bna.digitaltest.pages.TicketPage.getMessageText(TicketPage.java:18)
-at ar.com.bna.digitaltest.testcases.DebinTest.generateDebin(DebinTest.java:68)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null
+at ar.com.bna.digitaltest.pages.BasePage.sendKeys(BasePage.java:47)
+at ar.com.bna.digitaltest.pages.LoginPage1.enterUsername(LoginPage1.java:23)
+at ar.com.bna.digitaltest.testcases.DebinTest.loginAndGoToNuevoPagoPage(DebinTest.java:40)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -133,15 +185,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateDebin -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:12:29 GMT-03:00" name="setup" finished-at="2025-08-15T19:13:04 GMT-03:00" duration-ms="35043" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="setup" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1755368713472" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:13:04 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-08-15T19:13:12 GMT-03:00" duration-ms="8693" status="PASS">
+        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1755368713474" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndGoToNuevoPagoPage -->
-        <test-method signature="generateDebinRecurrente(int,java.lang.String)[pri:4, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:13:12 GMT-03:00" name="generateDebinRecurrente" data-provider="debinData" finished-at="2025-08-15T19:13:59 GMT-03:00" duration-ms="46988" status="FAIL">
+        <test-method signature="generateDebinRecurrente(int,java.lang.String)[pri:4, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="generateDebinRecurrente" data-provider="debinData" finished-at="2025-08-16T15:25:13 GMT-03:00" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -156,16 +208,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.getText()" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.getText()" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null
-at ar.com.bna.digitaltest.pages.TicketPage.getMessageText(TicketPage.java:18)
-at ar.com.bna.digitaltest.testcases.DebinTest.generateDebinRecurrente(DebinTest.java:84)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null
+at ar.com.bna.digitaltest.pages.BasePage.sendKeys(BasePage.java:47)
+at ar.com.bna.digitaltest.pages.LoginPage1.enterUsername(LoginPage1.java:23)
+at ar.com.bna.digitaltest.testcases.DebinTest.loginAndGoToNuevoPagoPage(DebinTest.java:40)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -194,15 +251,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- generateDebinRecurrente -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:14:00 GMT-03:00" name="setup" finished-at="2025-08-15T19:14:34 GMT-03:00" duration-ms="34975" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:14:34 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-08-15T19:14:45 GMT-03:00" duration-ms="10053" status="PASS">
+        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1755368713481" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndGoToNuevoPagoPage -->
-        <test-method signature="generateDebinRecurrente(int,java.lang.String)[pri:4, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-15T19:14:45 GMT-03:00" name="generateDebinRecurrente" data-provider="debinData" finished-at="2025-08-15T19:15:31 GMT-03:00" duration-ms="46931" status="FAIL">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="setup" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1755368713481" status="SKIP">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="generateDebinRecurrente(int,java.lang.String)[pri:4, instance:ar.com.bna.digitaltest.testcases.DebinTest@46d59067]" started-at="2025-08-16T15:25:13 GMT-03:00" name="generateDebinRecurrente" data-provider="debinData" finished-at="2025-08-16T15:25:13 GMT-03:00" duration-ms="0" status="SKIP">
           <params>
             <param index="0">
               <value>
@@ -217,16 +274,21 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <exception class="java.lang.NullPointerException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.getText()" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null]]>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.getText()" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null
-at ar.com.bna.digitaltest.pages.TicketPage.getMessageText(TicketPage.java:18)
-at ar.com.bna.digitaltest.testcases.DebinTest.generateDebinRecurrente(DebinTest.java:84)
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.sendKeys(java.lang.CharSequence[])" because the return value of "ar.com.bna.digitaltest.pages.BasePage.waitUntilElementIsPresent(org.openqa.selenium.By)" is null
+at ar.com.bna.digitaltest.pages.BasePage.sendKeys(BasePage.java:47)
+at ar.com.bna.digitaltest.pages.LoginPage1.enterUsername(LoginPage1.java:23)
+at ar.com.bna.digitaltest.testcases.DebinTest.loginAndGoToNuevoPagoPage(DebinTest.java:40)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:62)
+at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:385)
+at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:321)
+at org.testng.internal.TestInvoker.runConfigMethods(TestInvoker.java:700)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:527)
 at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
 at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
 at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
@@ -257,7 +319,7 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
         </test-method> <!-- generateDebinRecurrente -->
       </class> <!-- ar.com.bna.digitaltest.testcases.DebinTest -->
       <class name="ar.com.bna.digitaltest.testcases.BaseTest">
-        <test-method is-config="true" signature="openHtmlReport()[pri:0, instance:ar.com.bna.digitaltest.testcases.BaseTest@57db2b13]" started-at="2025-08-15T19:15:32 GMT-03:00" name="openHtmlReport" finished-at="2025-08-15T19:15:33 GMT-03:00" duration-ms="1033" status="PASS">
+        <test-method is-config="true" signature="openHtmlReport()[pri:0, instance:ar.com.bna.digitaltest.testcases.BaseTest@57db2b13]" started-at="2025-08-16T15:25:14 GMT-03:00" name="openHtmlReport" finished-at="1969-12-31T21:00:00 GMT-03:00" duration-ms="-1755368714006" status="SKIP">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openHtmlReport -->
