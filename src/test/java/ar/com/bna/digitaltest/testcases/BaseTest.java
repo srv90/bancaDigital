@@ -148,7 +148,7 @@ public class BaseTest {
 		} else {
 			options.addArguments("--force-device-scale-factor=0.9");
 		}
-	    //System.setProperty("webdriver.chrome.driver", "C:\\Users\\n67814\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+	     //System.setProperty("webdriver.chrome.driver", "C:\\Users\\n67814\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
 
 
 		return new ChromeDriver(options);
