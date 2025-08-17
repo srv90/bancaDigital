@@ -137,11 +137,12 @@ public class BaseTest {
 		ChromeOptions options = new ChromeOptions();
 		proxy = new Proxy();
 		proxy.setHttpProxy("10.2.248.246:8080");
-		options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
+		options.setProxy(proxy);
 		Map<String, Object> prefs = new HashMap<>();
 		prefs.put("credentials_enable_service", false);
 		prefs.put("profile.password_manager_enabled", false);
 		options.setExperimentalOption("prefs", prefs);
+		options.setExperimentalOption("excludeSwitches", new String[] { "enable-automation" });
 
 		if (headless) {
 			options.addArguments("--headless=new", "--force-device-scale-factor=0.6");
