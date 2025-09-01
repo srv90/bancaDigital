@@ -3,16 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ar.com.bna.digitaltest.testcases.PFTest">
+      <class name="ar.com.bna.digitaltest.testcases.TransferenciaTest">
         <methods>
-          <include name="loginAndGoToInvestmentsPage"/>
-          <include name="tearDown"/>
-          <include name="openHtmlReport"/>
-          <include name="setup"/>
+          <include name="loginAndGoToNuevoPagoPage"/>
           <include name="initializeProperties"/>
-          <include name="generatePF"/>
+          <include name="setup"/>
+          <include name="TransferTo3ros"/>
         </methods>
-      </class> <!-- ar.com.bna.digitaltest.testcases.PFTest -->
+      </class> <!-- ar.com.bna.digitaltest.testcases.TransferenciaTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

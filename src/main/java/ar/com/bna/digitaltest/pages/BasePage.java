@@ -7,6 +7,7 @@ import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -122,6 +123,12 @@ public class BasePage {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
+	
+	// Scrollear la pagina
+	public void scrollByElement(WebElement element, int cantPixeles) {
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	    js.executeScript("arguments[0].scrollBy({top: arguments[1], left: 0, behavior: 'smooth'});", element, cantPixeles);
+	}
 
 	public int existsElement(By locator) {
 
@@ -133,4 +140,16 @@ public class BasePage {
 	 * this.getWebElement(locator).getText(); }
 	 */
 
+	
+	public void selectItemFromReactDropDownByIndex(By dropDownLocator, int indexElement) {
+
+	    for (int i = 0; i < indexElement; i++) {
+	        actions.sendKeys(Keys.DOWN);
+	    }
+	    actions.sendKeys(Keys.ENTER);
+
+	    actions.build().perform();
+	}
+	
+	
 }

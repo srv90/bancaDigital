@@ -11,6 +11,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.io.FileHandler;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
 public class Utilities {
 
 	// public final static int IMPLICIT_WAIT_TIME = 20;
@@ -29,7 +35,8 @@ public class Utilities {
 		return path;
 
 	}
-
+	
+    //Agarra la la primera cuenta con saldo mayor al importe
 	public static Optional<String> getCuenta(List<WebElement> cuentas, String importe) {
 		return cuentas.stream().filter(cuenta -> Double.parseDouble(importe) < formatearMonto(cuenta.getText()))
 				.map(WebElement::getText).findFirst();
@@ -43,5 +50,12 @@ public class Utilities {
 			throw new IllegalArgumentException("Monto inválido: " + monto, e);
 		}
 	}
+	
 
 }
+
+
+
+
+
+

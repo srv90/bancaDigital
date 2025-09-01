@@ -37,6 +37,7 @@ public class DebinTest extends BaseTest {
 		horaExpiracion = super.getTestDataProperties().getProperty("horaExpiracion");
 		ticketOkMensaje = super.getTestDataProperties().getProperty("ticketOkMessageDebin");
 		LoginPage1 loginPage1 = super.getPageThread().get().getInstance(LoginPage1.class);
+		loginPage1.enterDoc(super.getTestDataProperties().getProperty("validDni"));
 		loginPage1.enterUsername(super.getTestDataProperties().getProperty("validUsername"));
 		LoginPage2 loginPage2 = loginPage1.getLoginPage2();
 		loginPage2.enterPassword(super.getTestDataProperties().getProperty("validPassword"));

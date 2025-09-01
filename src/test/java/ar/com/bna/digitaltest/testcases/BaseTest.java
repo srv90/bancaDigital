@@ -8,12 +8,15 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Properties;
 
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -83,7 +86,7 @@ public class BaseTest {
 		System.out.println("DRIVER CREATED");
 	}
 
-	@AfterMethod
+	//@AfterMethod
 	public void tearDown() {
 
 		System.out.println("After Test Thread ID: " + Thread.currentThread().getId());
@@ -93,7 +96,7 @@ public class BaseTest {
 
 	}
 
-	@AfterSuite()
+	/*@AfterSuite()
 	public void openHtmlReport() {
 
 		try {
@@ -107,7 +110,7 @@ public class BaseTest {
 			e.printStackTrace();
 		}
 
-	}
+	}*/
 
 	public ThreadLocal<BasePage> getPageThread() {
 		return pageThread;
@@ -135,9 +138,9 @@ public class BaseTest {
 
 	private WebDriver createChromeDriver(boolean headless) {
 		ChromeOptions options = new ChromeOptions();
-		proxy = new Proxy();
+		/*proxy = new Proxy();
 		proxy.setHttpProxy("10.2.248.246:8080");
-		options.setProxy(proxy);
+		options.setProxy(proxy);*/
 		Map<String, Object> prefs = new HashMap<>();
 		prefs.put("credentials_enable_service", false);
 		prefs.put("profile.password_manager_enabled", false);
@@ -154,5 +157,8 @@ public class BaseTest {
 
 		return new ChromeDriver(options);
 	}
+	
+	
+
 
 }

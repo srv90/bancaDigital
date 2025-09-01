@@ -8,20 +8,24 @@ import ar.com.bna.digitaltest.pages.HomePage;
 import ar.com.bna.digitaltest.pages.LoginPage1;
 import ar.com.bna.digitaltest.pages.LoginPage2;
 import ar.com.bna.digitaltest.pages.TransfersPage;
+import ar.com.bna.digitaltest.pages.DiaryTransferPage;
 
 public class TransferenciaTest extends BaseTest {
 
 	private TransfersPage transfersPage =  null;
+	private DiaryTransferPage diaryTransfersPage = null;
 	
 	@BeforeMethod()
 	public void loginAndGoToNuevoPagoPage() {
 		LoginPage1 loginPage1 = super.getPageThread().get().getInstance(LoginPage1.class);
+		loginPage1.enterDoc(super.getTestDataProperties().getProperty("validDni"));
 		loginPage1.enterUsername(super.getTestDataProperties().getProperty("validUsername"));
 		LoginPage2 loginPage2 = loginPage1.getLoginPage2();
 		loginPage2.enterPassword(super.getTestDataProperties().getProperty("validPassword"));
 		HomePage homePage = loginPage2.getHomePage();
 		transfersPage = homePage.getTransferenciasPage();
-
+		diaryTransfersPage = transfersPage.getTransferenciasAliasCbuCVu();
+		
 	}
 
 	@Test(priority = 1)
@@ -32,7 +36,11 @@ public class TransferenciaTest extends BaseTest {
 	@Test(priority = 2)
 	public void verifyHeader() {
 		Assert.assertEquals("Transferencias",transfersPage.getTransfersPageHeader());
-
+	}
+	
+	@Test()
+	public void TransferTo3ros() {
+		diaryTransfersPage.SendTransfer("1000");
 	}
 
 }
