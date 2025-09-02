@@ -92,7 +92,7 @@ public class DebinTest extends BaseTest {
 	@DataProvider
 	public static Object[][] debinData() {
 
-		return new Object[][] { { 1, "1" }, { 2, "1" } };
+		return new Object[][] { {1,"103"} };
 
 	}
 

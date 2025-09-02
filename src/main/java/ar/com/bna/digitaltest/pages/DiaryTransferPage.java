@@ -59,11 +59,10 @@ public class DiaryTransferPage extends BasePage {
 		super.moveToWebElement(btnContinue);
 		super.doubleClickWebElement(btnContinue);
 		
-		super.moveToWebElement(inputToken);
-		super.click(inputToken);
-		super.getWebElement(inputToken).sendKeys("111111", Keys.ENTER);
 		super.moveToWebElement(btnConfirm);
 		super.doubleClickWebElement(btnConfirm);
+		super.getWebElement(inputToken).sendKeys("111111", Keys.ENTER);
+
 
 	}
 	

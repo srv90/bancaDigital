@@ -12,11 +12,11 @@ public class SellerGeneratePage extends BasePage {
 	private By recurrenciaCheckbox = By.id("recurring");
 	private By prestacionesCombobox = By.xpath("//div[@id='react-select__value-entitlement_entitlement']");
 	private By cuentaCreditoCombobox = By.xpath("//div[@id='react-select__value-accountSelector_accountSelector']");
-	private By cuentaCreditoUsd = By.xpath("//span[normalize-space()='CCE U$S 00700170285542']"); // 00700170288299 00700170285542 11301300027942
-	private By cuentaCreditoPesos = By.xpath("//span[normalize-space()='CC $ 00700170604733']"); 
+	private By cuentaCreditoUsd = By.xpath("//div[normalize-space()='CUENTAS CORRIENTES ESPECIALES DOLAR 0170285542']"); // 00700170288299 00700170285542 11301300027942
+	private By cuentaCreditoPesos = By.xpath("//div[normalize-space()='CUENTA CORRIENTES PESOS 0170604733']"); 
 	private By aliasCBU = By.id("aliasCbu");
 	private By cbucvu = By.cssSelector("//p[normalize-space()='CBU/CVU']");
-	private By importe = By.id("amount");
+	private By importe = By.xpath("//input[contains(@id,'amount')]");
 	private By horaExpiracion = By.id("validityTime");
 	private By checkboxTyC = By.id("agreement.span");
 	private By modalTexto = By.id("agreement_modal_scroll");
@@ -26,6 +26,8 @@ public class SellerGeneratePage extends BasePage {
 	private By confirmarButton = By.id("global.confirm");
 	private By tokens = By.id("secondFactor");
 	private By comprobanteButton = By.id(".movements.voucherNumber.title.label..file_file.false.span");
+	private By mainContainer = By.xpath("//div[contains(@id,'defaultLayoutContent')]");
+
 
 	public SellerGeneratePage(WebDriver driver) {
 		super(driver);
@@ -34,7 +36,8 @@ public class SellerGeneratePage extends BasePage {
 	public TicketPage generarDebin(String importe, String aliasCBU, String horaExpiracion, boolean recurrencia,
 			String moneda) {
 
-		super.moveToWebElement(guardarPlantillaButton);
+		//super.moveToWebElement(guardarPlantillaButton);
+		super.scrollByElement(super.getWebElement(mainContainer),500);
 
 		if (recurrencia) {
 			super.waitUntilElementIsClickable(recurrenciaCheckbox).click();
@@ -55,14 +58,23 @@ public class SellerGeneratePage extends BasePage {
 			super.waitUntilElementIsPresent(cuentaCreditoPesos).click();
 
 		}
-
+		
 		super.doubleClickWebElement(this.importe);
+		super.moveToWebElement(this.importe);
 		super.getWebElement(this.importe).sendKeys(importe);
 		super.getWebElement(this.aliasCBU).sendKeys(aliasCBU);
+		//super.scrollByElement(super.getWebElement(mainContainer),500);
+		
+
+		super.scrollByElement(super.getWebElement(mainContainer),500);
+
 		super.getWebElement(this.horaExpiracion).sendKeys(horaExpiracion, Keys.TAB, Keys.SPACE);
 		super.waitUntilElementIsPresent(modalTexto).click();
 		super.waitUntilElementIsPresent(modalTexto).sendKeys(Keys.END);
 		super.waitUntilElementIsClickable(modalAceptarButton).click();
+
+		super.scrollByElement(super.getWebElement(mainContainer),500);
+		
 		super.moveToWebElement(continuarButton);
 		super.getWebElement(continuarButton).click();
 		super.moveToWebElement(confirmarButton);

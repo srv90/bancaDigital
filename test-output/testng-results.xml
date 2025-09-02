@@ -1,67 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="0" failed="1" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-29T13:16:33 GMT-03:00" name="Default suite" finished-at="2025-08-29T13:17:46 GMT-03:00" duration-ms="73401">
+  <suite started-at="2025-09-02T10:16:54 GMT-03:00" name="Default suite" finished-at="2025-09-02T10:17:49 GMT-03:00" duration-ms="55493">
     <groups>
     </groups>
-    <test started-at="2025-08-29T13:16:33 GMT-03:00" name="Default test" finished-at="2025-08-29T13:17:46 GMT-03:00" duration-ms="73401">
+    <test started-at="2025-09-02T10:16:54 GMT-03:00" name="Default test" finished-at="2025-09-02T10:17:49 GMT-03:00" duration-ms="55493">
       <class name="ar.com.bna.digitaltest.testcases.TransferenciaTest">
-        <test-method is-config="true" signature="initializeProperties()[pri:0, instance:ar.com.bna.digitaltest.testcases.TransferenciaTest@6f03482]" started-at="2025-08-29T13:16:33 GMT-03:00" name="initializeProperties" finished-at="2025-08-29T13:16:33 GMT-03:00" duration-ms="16" status="PASS">
+        <test-method is-config="true" signature="initializeProperties()[pri:0, instance:ar.com.bna.digitaltest.testcases.TransferenciaTest@6f03482]" started-at="2025-09-02T10:16:54 GMT-03:00" name="initializeProperties" finished-at="2025-09-02T10:16:54 GMT-03:00" duration-ms="19" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializeProperties -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.TransferenciaTest@6f03482]" started-at="2025-08-29T13:16:33 GMT-03:00" name="setup" finished-at="2025-08-29T13:16:51 GMT-03:00" duration-ms="17941" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:ar.com.bna.digitaltest.testcases.TransferenciaTest@6f03482]" started-at="2025-09-02T10:16:54 GMT-03:00" name="setup" finished-at="2025-09-02T10:17:14 GMT-03:00" duration-ms="19686" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.TransferenciaTest@6f03482]" started-at="2025-08-29T13:16:51 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-08-29T13:17:03 GMT-03:00" duration-ms="11654" status="PASS">
+        <test-method is-config="true" signature="loginAndGoToNuevoPagoPage()[pri:0, instance:ar.com.bna.digitaltest.testcases.TransferenciaTest@6f03482]" started-at="2025-09-02T10:17:14 GMT-03:00" name="loginAndGoToNuevoPagoPage" finished-at="2025-09-02T10:17:35 GMT-03:00" duration-ms="21381" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginAndGoToNuevoPagoPage -->
-        <test-method signature="TransferTo3ros()[pri:0, instance:ar.com.bna.digitaltest.testcases.TransferenciaTest@6f03482]" started-at="2025-08-29T13:17:03 GMT-03:00" name="TransferTo3ros" finished-at="2025-08-29T13:17:46 GMT-03:00" duration-ms="43732" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[Element must be set]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: Element must be set
-at org.openqa.selenium.internal.Require.nonNull(Require.java:63)
-at org.openqa.selenium.interactions.PointerInput$Origin.fromElement(PointerInput.java:280)
-at org.openqa.selenium.interactions.Actions.moveInTicks(Actions.java:354)
-at org.openqa.selenium.interactions.Actions.moveToElement(Actions.java:333)
-at ar.com.bna.digitaltest.pages.BasePage.moveToWebElement(BasePage.java:104)
-at ar.com.bna.digitaltest.pages.DiaryTransferPage.SendTransfer(DiaryTransferPage.java:63)
-at ar.com.bna.digitaltest.testcases.TransferenciaTest.TransferTo3ros(TransferenciaTest.java:43)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
+        <test-method signature="TransferTo3ros()[pri:0, instance:ar.com.bna.digitaltest.testcases.TransferenciaTest@6f03482]" started-at="2025-09-02T10:17:35 GMT-03:00" name="TransferTo3ros" finished-at="2025-09-02T10:17:49 GMT-03:00" duration-ms="14333" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TransferTo3ros -->
