@@ -18,14 +18,4 @@ public class RetryListener implements IRetryAnalyzer {
 		return false;
 	}
 
-		
-
-	public boolean retry2(ITestResult result) {
-		if (retryCount < MAX_RETRY_COUNT) {
-			retryCount++;
-			System.out.println("Se ejecuta nuevamente el caso : " + result.getName() + ", intento: " + retryCount);
-			return true;
-		}
-		return false;
-	}
 }
