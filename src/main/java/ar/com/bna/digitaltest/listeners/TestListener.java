@@ -12,7 +12,7 @@ import com.aventstack.extentreports.Status;
 import ar.com.bna.digitaltest.util.ExtentReporter;
 import ar.com.bna.digitaltest.util.Utilities;
 
-public class Listeners implements ITestListener {
+public class TestListener implements ITestListener {
 
 	ExtentReports extentReports = ExtentReporter.generateExtentReport();
 	ExtentTest extentTest;

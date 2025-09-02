@@ -4,13 +4,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import ar.com.bna.digitaltest.pages.ComprobantePage;
+import ar.com.bna.digitaltest.pages.FirstPaymentPage1;
 import ar.com.bna.digitaltest.pages.FirstPaymentPage2;
 import ar.com.bna.digitaltest.pages.FirstPaymentPage3;
 import ar.com.bna.digitaltest.pages.HomePage;
 import ar.com.bna.digitaltest.pages.LoginPage1;
 import ar.com.bna.digitaltest.pages.LoginPage2;
-import ar.com.bna.digitaltest.pages.ComprobantePage;
-import ar.com.bna.digitaltest.pages.FirstPaymentPage1;
 import ar.com.bna.digitaltest.pages.PaymentsAgenda;
 import ar.com.bna.digitaltest.pages.PaymentsPage;
 import ar.com.bna.digitaltest.pages.TicketPage;

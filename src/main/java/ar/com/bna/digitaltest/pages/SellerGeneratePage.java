@@ -12,8 +12,10 @@ public class SellerGeneratePage extends BasePage {
 	private By recurrenciaCheckbox = By.id("recurring");
 	private By prestacionesCombobox = By.xpath("//div[@id='react-select__value-entitlement_entitlement']");
 	private By cuentaCreditoCombobox = By.xpath("//div[@id='react-select__value-accountSelector_accountSelector']");
-	private By cuentaCreditoUsd = By.xpath("//span[normalize-space()='CCE U$S 00700170285542']"); // 00700170288299 00700170285542 11301300027942
-	private By cuentaCreditoPesos = By.xpath("//span[normalize-space()='CC $ 00700170604733']"); 
+	//private By cuentaCreditoUsd = By.xpath("//span[normalize-space()='CCE U$S 00700170285542']"); // 00700170288299 00700170285542 11301300027942
+	//private By cuentaCreditoPesos = By.xpath("//span[normalize-space()='CC $ 00700170604733']"); 
+	private By cuentaCreditoUsd = By.xpath("//div[normalize-space()='CUENTAS CORRIENTES ESPECIALES DOLAR 0170285542']"); // 00700170288299 00700170285542 11301300027942
+	private By cuentaCreditoPesos = By.xpath("//div[normalize-space()='CUENTA CORRIENTES PESOS 0170604733']");
 	private By aliasCBU = By.id("aliasCbu");
 	private By cbucvu = By.cssSelector("//p[normalize-space()='CBU/CVU']");
 	private By importe = By.id("amount");

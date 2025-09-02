@@ -91,7 +91,7 @@ public class BaseTest {
 
 	}
 
-	@AfterSuite()
+	//@AfterSuite()
 	public void openHtmlReport() {
 
 		try {

@@ -1,21 +1,14 @@
 package ar.com.bna.digitaltest.testcases;
 
-import java.io.IOException;
-
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import ar.com.bna.digitaltest.pages.ComprobantePFPage;
-import ar.com.bna.digitaltest.pages.DebinPage;
 import ar.com.bna.digitaltest.pages.HomePage;
 import ar.com.bna.digitaltest.pages.InvestmentsPage;
 import ar.com.bna.digitaltest.pages.LoginPage1;
 import ar.com.bna.digitaltest.pages.LoginPage2;
-import ar.com.bna.digitaltest.pages.SellerGeneratePage;
-import ar.com.bna.digitaltest.pages.SellerPage;
-import ar.com.bna.digitaltest.pages.TicketPage;
 import ar.com.bna.digitaltest.pages.newPFPage;
 import ar.com.bna.digitaltest.pages.newPFPage2;
 

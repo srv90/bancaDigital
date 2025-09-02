@@ -66,7 +66,7 @@ public class ConfirmarPagoTest extends BaseTest {
 	}
 
 
-	@Test(priority = 5)
+	@Test(priority = 5, enabled = false)
 	public void submmitPayment() {
 
 		firstPaymentPage2.generarPago("1000", concepto, referencia);

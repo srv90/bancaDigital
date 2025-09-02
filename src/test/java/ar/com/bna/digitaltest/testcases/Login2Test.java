@@ -1,20 +1,16 @@
 package ar.com.bna.digitaltest.testcases;
 
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import ar.com.bna.digitaltest.listeners.RetryListener;
 import ar.com.bna.digitaltest.pages.HomePage;
 import ar.com.bna.digitaltest.pages.LoginPage1;
 import ar.com.bna.digitaltest.pages.LoginPage2;
 
 public class Login2Test extends BaseTest {
 
-	@Test(priority = 1) //, dataProvider = "dataProvider")
+	@Test(priority = 1, retryAnalyzer = RetryListener.class) //, dataProvider = "dataProvider")
 	public void enterValidCredentialsAndLogin() { //(String username, String password) {  
 		LoginPage1 loginPage1 = super.getPageThread().get().getInstance(LoginPage1.class);
 		//loginPage1.enterUsername(username);

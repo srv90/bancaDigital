@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Built-By: E97782
+Built-By: e97782
 Build-Jdk: 23
 Created-By: Maven Integration for Eclipse
 

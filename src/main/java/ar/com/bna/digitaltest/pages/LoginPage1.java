@@ -9,7 +9,8 @@ public class LoginPage1 extends BasePage {
 	private By username = By.id("username");
 	private By continuarButton = By.id("global.continue");
 	private By recuperarUsuario = By.id(".login.stepOne.forgotUser..false.false.span");
-
+	private By  nroDni = By.id("document");
+	
 	public LoginPage1(WebDriver driver) {
 		super(driver);
 	}
@@ -22,6 +23,10 @@ public class LoginPage1 extends BasePage {
 	public void enterUsername(String username) {
 		super.sendKeys(this.username, username);
 	}
+	
+	public void enterDoc(String nroDni) {
+		super.sendKeys(this.nroDni, nroDni);
+		}
 	
 	public RecuperarUsuarioPage getRecuperarUsuario() {
 		super.waitUntilElementIsPresent(recuperarUsuario).click();

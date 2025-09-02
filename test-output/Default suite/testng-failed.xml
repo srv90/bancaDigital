@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="ar.com.bna.digitaltest.testcases.ConfirmarPagoTokenTest">
+      <class name="ar.com.bna.digitaltest.testcases.DebinTest">
         <methods>
-          <include name="loginAndGoToNuevoPagoPage"/>
-          <include name="enterTokenAndSubmmitWrongPayment"/>
-          <include name="openHtmlReport"/>
+          <include name="generateDebin" invocation-numbers="0"/>
           <include name="setup"/>
+          <include name="loginAndGoToNuevoPagoPage"/>
           <include name="initializeProperties"/>
         </methods>
-      </class> <!-- ar.com.bna.digitaltest.testcases.ConfirmarPagoTokenTest -->
+      </class> <!-- ar.com.bna.digitaltest.testcases.DebinTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
